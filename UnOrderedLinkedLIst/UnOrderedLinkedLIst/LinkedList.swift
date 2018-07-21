@@ -51,7 +51,7 @@ class LinkedList<T: Comparable>{
             var dataNode = self.start
             while dataNode != nil{
                 if let val = dataNode?.data{
-                print(val)
+                    print(val)
                 }
                 dataNode = dataNode?.nextLink
             }
@@ -81,12 +81,12 @@ class LinkedList<T: Comparable>{
             var dataNode = self.start
             while dataNode != nil{
                 if let val = dataNode?.data{
-                    data += "\(val)"
+                    data += val as! String
                 }
                 dataNode = dataNode?.nextLink
                 data += "\n"
             }
-             try data.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
+            try data.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
         }
         catch {
             print("ERROR")
@@ -95,3 +95,4 @@ class LinkedList<T: Comparable>{
         
     }
 }
+

@@ -14,7 +14,7 @@ do{
 }catch _ as NSError{
     print("Error occured.")
 }
-//integerArray.sort()
+integerArray.sort()
 for index in 0..<integerArray.count{
     linkedList.insertData(data:  integerArray[index])
 }
