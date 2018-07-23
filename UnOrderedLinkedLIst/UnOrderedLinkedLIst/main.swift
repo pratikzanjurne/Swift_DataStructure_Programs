@@ -1,5 +1,4 @@
 import Foundation
-
  let filePath = "/Users/bridgelabz/Library/Mobile Documents/com~apple~TextEdit/Documents/data.txt"
 var linkedList = LinkedList<String>()
 do{
@@ -11,7 +10,7 @@ do{
     }
     linkedList.display()
     print("Enter the word to search.")
-    var word = readLine()!
+    var word:String = readLine()!
     var result = linkedList.searchData(data: word)
     if result == true{
         print("The word is found in the list.")
