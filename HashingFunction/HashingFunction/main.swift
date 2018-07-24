@@ -1,21 +1,30 @@
+/*
+ *  Purpose - To create and print hashtable.
+ *  @author  Pratik Zanjurne
+ *  @version 4.0
+ *  @since   24-07-2018
+ */
+
 import Foundation
-var data = [Hashing(),Hashing(),Hashing(),Hashing(),Hashing(),Hashing(),Hashing(),Hashing(),Hashing(),Hashing(),Hashing()]
-var node = ReadFile()
+
+var data:[Hashing<Int>?] = [Hashing<Int>(),Hashing<Int>(),Hashing<Int>(),Hashing<Int>(),Hashing<Int>(),Hashing<Int>(),Hashing<Int>(),Hashing<Int>(),Hashing<Int>(),Hashing<Int>(),Hashing<Int>()]
+var fileData = Hashing<Int>()
 var integerArray = [Int]()
-integerArray = node.readFile()
 var remainder:Int
+
+integerArray = fileData.readFile()
+
 for index in  0..<integerArray.count{
     remainder = integerArray[index] % 11
-    if (data[remainder] == nil){
+    if (data[remainder]?.start == nil){
         data[remainder] = Hashing()
-        data[remainder].addItem(data: integerArray[index])
+        data[remainder]?.addItem(data: integerArray[index])
     }else{
-        data[remainder].addItem(data: integerArray[index])
+        data[remainder]?.addItem(data: integerArray[index])
     }
-    for index in 0..<11{
-        print(index)
-        if data[index] != nil{
-            data[index].display()
-        }
-    }
+}
+
+for index in 0...10{
+    print("\(index) ----" , terminator:" " )
+    data[index]?.display()
 }

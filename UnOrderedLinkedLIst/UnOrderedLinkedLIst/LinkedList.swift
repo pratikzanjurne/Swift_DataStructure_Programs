@@ -1,6 +1,6 @@
 class LinkedList<T: Comparable>{
     
-    let filePath = "/Users/bridgelabz/Library/Mobile Documents/com~apple~TextEdit/Documents/data.txt"
+    let filePath = "/Users/bridgelabz/Documents/Pratik/Swift_DataStructure_Programs/UnOrderedLinkedLIst/UnOrderedLinkedLIst/data.txt"
     
     var start:Node<T>?
     
@@ -90,9 +90,20 @@ class LinkedList<T: Comparable>{
         }
         catch {
             print("ERROR")
-            
         }
-        
+    }
+    
+    func readData() -> [Substring] {
+        do{
+            let fileData = try String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
+            var data = fileData.split(separator: " ")
+            data = fileData.split(separator: "\n")
+            return data 
+        }
+        catch{
+            print("Error")
+        }
+        return data
     }
 }
 

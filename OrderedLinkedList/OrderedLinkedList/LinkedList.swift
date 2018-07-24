@@ -1,15 +1,17 @@
+import Foundation
+
 class LinkedList<T: Comparable>{
     
-    let filePath = "/Users/bridgelabz/Library/Mobile Documents/com~apple~TextEdit/Documents/data.txt"
+    let filePath = "/Users/bridgelabz/Documents/Pratik/Swift_DataStructure_Programs/OrderedLinkedList/OrderedLinkedList/data.txt"
     
     var start:Node<T>?
     
-    
     func insertData(data: T) {
-        if self.start == nil
-        {
+    
+        if self.start == nil{
             self.start = Node<T>(data: data)
-        }else{
+        }
+        else{
             var lastNode = self.start
             while lastNode?.nextLink != nil{
                 lastNode = lastNode?.nextLink!
@@ -22,6 +24,7 @@ class LinkedList<T: Comparable>{
     
     
     func removeData(data: T){
+        
         var previousLink:Node<T>?
         if self.start == nil{
             print("The linked list is empty.")
@@ -45,6 +48,7 @@ class LinkedList<T: Comparable>{
     
     
     func display() {
+        
         if self.start == nil{
             print("The linked list is empty.")
         }else{
@@ -59,6 +63,7 @@ class LinkedList<T: Comparable>{
     }
     
     func searchData(data: T)-> Bool{
+        
         var dataNode = self.start
         if self.start == nil{
             print("The list is empty.")
@@ -76,6 +81,7 @@ class LinkedList<T: Comparable>{
         return false
     }
     func writeData(){
+        
         do {
             var data:String = ""
             var dataNode = self.start
@@ -92,6 +98,21 @@ class LinkedList<T: Comparable>{
             print("ERROR")
             
         }
+    }
+    func readData() -> [Int] {
+    
+        var integerArray = [Int]()
+        do{
+            let fileData = try String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
+            let data = Scanner(string: fileData)
+            var pointer = 0
+            while data.scanInt(&pointer){
+                integerArray.append(pointer)
+            }
+        }catch {
+            print("Error occured.")
+        }
+        return integerArray
         
     }
 }

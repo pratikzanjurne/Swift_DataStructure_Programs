@@ -1,21 +1,19 @@
+/*
+ *  Purpose - To create Ordered list isung linked list.
+ *  @author  Pratik Zanjurne
+ *  @version 4.0
+ *  @since   24-07-2018
+ */
+
 import Foundation
 
 var integerArray = [Int]()
 var linkedList = LinkedList<Int>()
-let filePath = "/Users/bridgelabz/Library/Mobile Documents/com~apple~TextEdit/Documents/data.txt"
 
-do{
-    let fileData = try String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
-    let data = Scanner(string: fileData)
-    var pointer = 0
-    while data.scanInt(&pointer){
-        integerArray.append(pointer)
-    }
-}catch _ as NSError{
-    print("Error occured.")
-}
+integerArray = linkedList.readData()
 integerArray.sort()
 for index in 0..<integerArray.count{
+    //print(integerArray[index])
     linkedList.insertData(data:  integerArray[index])
 }
 linkedList.display()

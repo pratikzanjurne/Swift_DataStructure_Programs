@@ -1,10 +1,10 @@
 import Foundation
 
-class Node{
-    var data:Int
-    var nextLink:Node?
+class Node<T>{
+    var data:T
+    var nextLink:Node<T>?
     
-    init(data : Int) {
+    init(data : T) {
         self.data = data
     }
     

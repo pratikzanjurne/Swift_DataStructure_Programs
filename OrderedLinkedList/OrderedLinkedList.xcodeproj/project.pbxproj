@@ -29,6 +29,7 @@
 		0A2B5CD02102FF6B00E659CD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0A2B5CD72102FF9100E659CD /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		0A2B5CD92103017800E659CD /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		0A3E77A62106E5DC00DA7E2A /* data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 				0A2B5CD02102FF6B00E659CD /* main.swift */,
 				0A2B5CD72102FF9100E659CD /* Node.swift */,
 				0A2B5CD92103017800E659CD /* LinkedList.swift */,
+				0A3E77A62106E5DC00DA7E2A /* data.txt */,
 			);
 			path = OrderedLinkedList;
 			sourceTree = "<group>";
