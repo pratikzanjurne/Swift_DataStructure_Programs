@@ -14,7 +14,7 @@ if let month = readLine(){
         if let year = readLine(){
             if let year = Int(year){
                 print("    \(Calander.months[month])   \(year) ")
-                print("  S   M   Tu  W   Th  F   S ")
+                print("  S   M  Tu   W   Th   F   S ")
                 utility.creatCalander(month: month, year: year)
                 utility.printCalander()
             }else {
